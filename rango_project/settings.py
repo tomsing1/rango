@@ -52,6 +52,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'rango_project.urls'
+LOGIN_URL = 'rango:login'
 
 TEMPLATES = [
     {
