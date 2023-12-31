@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rango',
+    'registration',
 ]
 
 MIDDLEWARE = [
@@ -52,7 +53,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'rango_project.urls'
-LOGIN_URL = 'rango:login'
 
 TEMPLATES = [
     {
@@ -84,6 +84,14 @@ DATABASES = {
     }
 }
 
+# If True, users can register.
+REGISTRATION_OPEN = True
+# If True, the user will be automatically logged in after registering.
+REGISTRATION_AUTO_LOGIN = True
+# The URL that Django redirects users to after logging in.
+LOGIN_REDIRECT_URL = 'rango:index'
+# The page users are directed to if they are not logged in.
+LOGIN_URL = 'auth_login'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
